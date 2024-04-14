@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style/all.css" />
+    <link rel="stylesheet" href="./style/profile.css" />
+</head>
+
+<body class="light-mood">
+    <section class="main">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid position-fixed" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <div class="d-flex align-items-center text-info fw-bold">
+                        <img src="./Images/Logo.png" alt="" class="" />
+                        EC Department
+                    </div>
+                </a>
+                <button class="navbar-toggler text-secondary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto gap-3 align-items-start align-items-lg-center">                       
+                        <li class="nav-item">
+                            <div class="nav-link" style="cursor: pointer">
+                                <span class="d-none" id="moon">Theme<i class="fa-solid fa-moon ms-2"></i></span>
+                                <span class="" id="sun">Theme<i class="fa-solid fa-sun ms-2"></i></span>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="user_name" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="./Images/Ellipse 4.png" alt="" class="me-2 rounded-circle"
+                                    style="width: 40px; height: 40px" />
+                                Mg Tect Htun
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="user_name">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="./Images/user.png" alt="" class="me-2" />
+                                        Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="./Images/setting.png" alt="" class="me-2" />
+                                        Setting
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="./Images/SignOut.png" alt="" class="me-2" />
+                                        Log out
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="profile-setting" style="padding-top: 80px">
+            <div class="container py-5">
+                <form action="">
+                    <div class="mb-3">
+                        <input type="file" accept="image/*" class="d-none" id="upload_profile" />
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-start align-items-center gap-3 position-relative"
+                            id="file_upload">
+                            <div class="" id="img_preview">
+                                <img src="./Images/Ellipse 4.png" alt="" class="rounded-circle" />
+                            </div>
+
+                            <div class="" id="hover_effect">
+                                <i class="fa-solid fa-camera"></i>
+                            </div>
+                            <h6 class="text-primary">Update your profile</h6>
+                        </div>
+                    </div>
+                    <div class="my-4 divider rounded-pill bg-primary" style="height: 3px"></div>
+                    <h6 class="text-info fw-bold mb-3">Basic Information</h6>
+                    <div class="mb-3">
+                        <label for="profile_name" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="profile_name" value="Ko Tect Htun" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="profile_gmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="profile_gmail" value="texthtun12@gmail.com" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="attended_year" class="form-label">Attended Year</label>
+                        <select class="form-select" aria-label="Default select example" id="attended_year">
+                            <option selected value="0">First</option>
+                            <option value="1">Second</option>
+                            <option value="2">Third</option>
+                            <option value="3">Fourth</option>
+                            <option value="5">Fifth</option>
+                            <option value="6">Final</option>
+                        </select>
+                    </div>
+                    <h6 class="text-info fw-bold mb-3 mt-5">Change Password</h6>
+                    <div class="mb-3">
+                        <label for="old_password" class="form-label">Old Password</label>
+                        <input type="password" class="form-control" id="old_password"
+                            placeholder="Enter your old password" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="new_password" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="new_password"
+                            placeholder="Enter your new password" />
+                    </div>
+                    <div class="text-end">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </section>
+    </section>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="./js/all.js"></script>
+<script>
+    const input = document.querySelector("#upload_profile");
+    const select = document.querySelector("#hover_effect");
+    select.addEventListener("click", () => {
+        input.click();
+    });
+
+    const imgPreview = document.querySelector("#img_preview");
+
+    input.addEventListener("change", function () {
+        getImgData();
+    });
+
+    function getImgData() {
+        const files = input.files[0];
+        if (files) {
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(files);
+            fileReader.addEventListener("load", function () {
+                imgPreview.style.display = "block";
+                imgPreview.innerHTML = '<img src="' + this.result + '" class="rounded-circle" />';
+            });
+        }
+    }
+</script>
+
+</html>
